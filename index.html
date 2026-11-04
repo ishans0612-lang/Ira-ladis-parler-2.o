@@ -1,735 +1,318 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ira Ladies Parlour | Beauty & Care</title>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<title>IRA Beauty Parlour</title>
 
 <style>
-:root {
-  --ink:#28211d;
-  --muted:#786c64;
-  --yellow:#f5c400;
-  --orange:#ff7918;
-  --red:#df3c35;
-  --cream:#fff8ee;
-  --line:#f0e5d9;
-}
-
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
+*{
   margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:"DM Sans",sans-serif;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
-a {text-decoration:none;color:inherit}
-.wrap {width:min(1160px,92%);margin:auto}
-
-.topbar {
-  background:#29211e;
-  color:white;
-  padding:10px 0;
-  font-size:13px;
+body{
+  color:#402b20;
+  background:
+    radial-gradient(ellipse at 10% 10%,#fff0ad 0%,transparent 35%),
+    radial-gradient(ellipse at 90% 40%,#ffd9c2 0%,transparent 40%),
+    linear-gradient(135deg,#fffdf2,#fff4dc,#fff0e8);
 }
-.topbar .wrap {
+header{
+  padding:18px 7%;
   display:flex;
+  align-items:center;
   justify-content:space-between;
-  flex-wrap:wrap;
-}
-.topbar a {color:#ffd75a}
-
-header {
+  background:#fff9e9dd;
+  border-bottom:1px solid #f4d7a2;
   position:sticky;
   top:0;
-  z-index:20;
-  background:#fffdf9ed;
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
+  z-index:10;
 }
-.nav {
-  height:78px;
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:#c94320;
+}
+.logo span{color:#e9a51a;}
+nav{
+  display:flex;
+  gap:25px;
+}
+nav a{
+  text-decoration:none;
+  color:#603c2b;
+  font-weight:bold;
+}
+.hero{
+  min-height:520px;
+  padding:55px 7%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:35px;
 }
-.brand {display:flex;align-items:center;gap:11px}
-.brandmark {
-  width:43px;height:43px;
-  border-radius:15px;
-  background:linear-gradient(135deg,var(--yellow),var(--orange));
-  display:grid;place-items:center;
-}
-.brand strong {
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:19px;
-}
-.brand small {
-  color:var(--muted);
-  font-size:10px;
-  letter-spacing:2px;
-}
-.navlinks {display:flex;gap:25px;font-size:13px;font-weight:700}
-.navlinks a:hover {color:var(--red)}
-
-.btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  border:0;
-  border-radius:999px;
-  padding:13px 20px;
-  font-weight:800;
-  font-size:13px;
-  cursor:pointer;
-  transition:.25s;
-}
-.btn-primary {
-  background:linear-gradient(100deg,var(--yellow),var(--orange));
-  color:#2a201a;
-  box-shadow:0 9px 22px #ff9b2433;
-}
-.btn-outline {
-  border:1px solid #e8d9c9;
-  background:white;
-}
-.btn:hover {transform:translateY(-3px)}
-
-.hero {
-  padding:65px 0;
-  background:
-    radial-gradient(ellipse at 12% 20%,#ffe7a5,transparent 32%),
-    radial-gradient(ellipse at 92% 5%,#ffd9c1,transparent 29%),
-    linear-gradient(120deg,#fffaf2,#fff 55%,#fff3e9);
-}
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.03fr .97fr;
-  align-items:center;
-  gap:48px;
-}
-.eyebrow {
+.hero-text{flex:1;}
+.tag{
   display:inline-block;
-  color:#b65a20;
-  background:#fff0d7;
-  border:1px solid #ffe0a7;
-  border-radius:99px;
-  padding:9px 14px;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1px;
+  background:#ffe6a5;
+  color:#a84322;
+  padding:9px 17px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
 }
-.hero h1 {
-  font:800 clamp(42px,6vw,72px)/1.04 "Playfair Display",serif;
-  margin:22px 0 17px;
+.hero h1{
+  font-size:clamp(38px,6vw,65px);
+  line-height:1.15;
+  margin:22px 0;
+  color:#b83b20;
 }
-.hero h1 span {color:var(--orange)}
-.hero p {
-  max-width:490px;
-  color:var(--muted);
+.hero h1 span{color:#e9a51a;}
+.hero p{
+  font-size:17px;
   line-height:1.8;
-  font-size:15px;
+  color:#705344;
+  max-width:490px;
 }
-.hero-actions {
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin:27px 0;
+.main-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 28px;
+  background:linear-gradient(100deg,#edaa20,#e6532c);
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 8px 20px #e99a3b55;
 }
-.trust {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  color:#76675c;
-  font-size:12px;
-  font-weight:700;
+.hero-image{
+  flex:1;
+  max-width:590px;
+  position:relative;
 }
-.hero-photo {position:relative}
-.photo-frame {
-  padding:10px;
-  background:white;
-  border-radius:28px;
-  box-shadow:0 18px 55px #5d351414;
-  transform:rotate(1deg);
-}
-.photo-frame img {
+.hero-image img{
   display:block;
   width:100%;
-  height:420px;
-  object-fit:cover;
-  object-position:center 28%;
-  border-radius:20px;
+  height:auto;
+  object-fit:contain;
+  border-radius:25px;
+  box-shadow:0 15px 40px #8d633544;
 }
-.photo-tag {
-  position:absolute;
-  left:-22px;
-  bottom:28px;
-  background:white;
-  border-radius:17px;
-  padding:15px 18px;
-  box-shadow:0 18px 55px #5d351414;
-  font-size:12px;
-  font-weight:800;
+section{
+  padding:65px 7%;
 }
-.photo-tag b {
-  display:block;
-  color:var(--red);
-  font:700 20px "Playfair Display";
-}
-
-section {padding:76px 0}
-.section-head {
+.section-title{
   text-align:center;
-  max-width:650px;
-  margin:0 auto 36px;
+  margin-bottom:35px;
 }
-.kicker {
-  font-size:11px;
-  letter-spacing:2px;
-  color:#df6b22;
-  font-weight:800;
-  text-transform:uppercase;
+.section-title h2{
+  color:#bd4525;
+  font-size:34px;
+  margin-bottom:10px;
 }
-.section-head h2 {
-  font:700 clamp(30px,4vw,43px) "Playfair Display";
-  margin:10px 0;
-}
-.section-head p {
-  color:var(--muted);
-  line-height:1.7;
-  font-size:14px;
-}
-
-.services {background:white}
-.service-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
-}
-.service {
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:linear-gradient(145deg,#fff,#fffaf4);
-  transition:.25s;
-}
-.service:hover {
-  transform:translateY(-5px);
-  box-shadow:0 18px 55px #5d351414;
-}
-.service-icon {
-  width:48px;height:48px;
-  border-radius:16px;
-  display:grid;
-  place-items:center;
-  background:#fff0cc;
-  color:#c66b1c;
-  margin-bottom:17px;
-}
-.service-icon svg {
-  width:25px;height:25px;
-  fill:none;
-  stroke:currentColor;
-  stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-.service:nth-child(3n+2) .service-icon {
-  background:#ffe4dd;color:var(--red);
-}
-.service:nth-child(3n) .service-icon {
-  background:#ffead9;color:var(--orange);
-}
-.service h3 {
-  font:700 20px "Playfair Display";
-  margin:0 0 8px;
-}
-.service p {
-  font-size:13px;
-  line-height:1.65;
-  color:var(--muted);
-  margin:0;
-}
-
-.about {
-  background:linear-gradient(120deg,#fff5e7,#fff 55%,#fff0e7);
-}
-.about-grid {
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:55px;
-  align-items:center;
-}
-.about-art {
-  min-height:330px;
-  border-radius:28px;
-  background:linear-gradient(140deg,#ffead1,#ffd5c6);
-  display:grid;
-  place-items:center;
-}
-.big-icon {
-  width:150px;height:150px;
-  border-radius:48px;
-  background:#fff9;
-  display:grid;
-  place-items:center;
-  color:#c36a24;
-}
-.about-copy h2 {
-  font:700 40px "Playfair Display";
-  margin:12px 0;
-}
-.about-copy p {
-  color:var(--muted);
-  line-height:1.8;
-  font-size:14px;
-}
-.ticks {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:22px 0;
-}
-.ticks span {
-  font-size:13px;
-  font-weight:700;
-}
-.ticks span:before {
-  content:"✓";
-  color:#e26b21;
-  margin-right:8px;
-}
-
-.gallery {background:white}
-.gallery-grid {
+.section-title p{color:#80604b;}
+.services{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:14px;
+  gap:20px;
 }
-.gallery-grid img {
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:18px;
+.service{
+  text-align:center;
+  background:#fffdf8;
+  padding:30px 15px;
+  border:1px solid #f4dfb6;
+  border-radius:20px;
+  box-shadow:0 8px 25px #9a633015;
   transition:.3s;
 }
-.gallery-grid img:hover {transform:scale(1.025)}
-
-.booking {
-  background:#29211e;
-  color:white;
+.service:hover{
+  transform:translateY(-7px);
+  border-color:#e8a72d;
 }
-.booking-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-  align-items:center;
-}
-.booking h2 {
-  font:700 42px "Playfair Display";
-  margin:12px 0;
-}
-.booking p {
-  color:#d4c7bd;
-  line-height:1.8;
-  font-size:14px;
-}
-.contact-card {
-  background:white;
-  color:var(--ink);
-  border-radius:22px;
-  padding:25px;
-}
-.contact-card label {
-  display:block;
-  font-size:12px;
-  font-weight:800;
-  margin:12px 0 6px;
-}
-.contact-card input,
-.contact-card select,
-.contact-card textarea {
-  width:100%;
-  padding:13px;
-  border:1px solid #e9ddd2;
-  border-radius:11px;
-  background:#fffdf9;
-  font:inherit;
-  font-size:13px;
-}
-.contact-card .btn {width:100%;margin-top:16px}
-
-footer {
-  background:#1e1917;
-  color:#e9ddd2;
-  padding:32px 0;
-}
-.foot {
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.foot small {color:#a99a90}
-
-.float-wa {
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:30;
-  width:58px;height:58px;
-  border-radius:50%;
-  background:#20b96b;
-  color:white;
-  display:grid;
-  place-items:center;
-  box-shadow:0 10px 30px #0003;
-}
-svg {
-  width:22px;height:22px;
+.service svg{
+  width:45px;
+  height:45px;
+  stroke:#df7627;
   fill:none;
-  stroke:currentColor;
   stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
+  margin-bottom:15px;
 }
-
-@media(max-width:800px) {
-  .navlinks {display:none}
-  .hero-grid,.about-grid,.booking-grid {grid-template-columns:1fr}
-  .hero-photo {max-width:520px;margin:auto}
-  .photo-frame img {height:360px}
-  .service-grid {grid-template-columns:repeat(2,1fr)}
-  .gallery-grid {grid-template-columns:repeat(2,1fr)}
+.service h3{
+  color:#ad4328;
+  margin-bottom:9px;
 }
-@media(max-width:480px) {
-  .service-grid {gap:10px}
-  .service {padding:16px}
-  .service h3 {font-size:17px}
-  .service p {font-size:12px}
-  .gallery-grid img {height:155px}
-  .ticks {grid-template-columns:1fr}
+.service p{
+  font-size:14px;
+  color:#80604b;
+  line-height:1.6;
+}
+.about{
+  background:linear-gradient(110deg,#fff0c9,#fff8ed,#ffe1d2);
+  border-radius:28px;
+  text-align:center;
+}
+.about h2{
+  color:#b93d23;
+  font-size:32px;
+  margin-bottom:18px;
+}
+.about p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.9;
+  color:#705344;
+}
+.contact{
+  text-align:center;
+}
+.contact h2{
+  font-size:32px;
+  color:#bc4225;
+  margin-bottom:15px;
+}
+.contact p{
+  color:#705344;
+  line-height:1.8;
+}
+footer{
+  text-align:center;
+  padding:25px;
+  background:#9f3825;
+  color:white;
+}
+@media(max-width:800px){
+  header{padding:16px 5%;}
+  nav{gap:12px;}
+  nav a{font-size:13px;}
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 6%;
+  }
+  .hero p{margin:auto;}
+  .hero-image{width:100%;max-width:650px;}
+  .services{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .logo{font-size:20px;}
+  nav{gap:9px;}
+  nav a{font-size:11px;}
+  .services{grid-template-columns:1fr 1fr;gap:12px;}
+  .service{padding:22px 9px;}
+  .section-title h2{font-size:27px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
- <div class="wrap">
-  <span>✨ Your beauty, our passion</span>
-  <span>Call us: <a href="tel:7001539897">7001539897</a></span>
- </div>
-</div>
-
 <header>
-<div class="wrap nav">
-
-<a class="brand" href="#home">
- <span class="brandmark">
-  <svg viewBox="0 0 24 24">
-   <path d="M12 3c-2 4-6 6-6 11a6 6 0 0 0 12 0c0-5-4-7-6-11Z"/>
-  </svg>
- </span>
- <span>
-  <strong>Ira Ladies Parlour</strong>
-  <small>Beauty • Care • Confidence</small>
- </span>
-</a>
-
-<nav class="navlinks">
- <a href="#home">Home</a>
- <a href="#services">Services</a>
- <a href="#about">About</a>
- <a href="#gallery">Gallery</a>
- <a href="#contact">Contact</a>
-</nav>
-
-<a class="btn btn-primary" href="#contact">Book Appointment</a>
-
-</div>
+  <div class="logo">IRA <span>BEAUTY</span></div>
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#services">সার্ভিস</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
 </header>
 
 <main>
-
-<!-- HERO -->
 <section class="hero" id="home">
-<div class="wrap hero-grid">
 
-<div>
- <span class="eyebrow">✦ Welcome to Ira Ladies Parlour</span>
+  <div class="hero-text">
+    <span class="tag">WELCOME TO IRA BEAUTY PARLOUR</span>
 
- <h1>Feel Beautiful.<br>
- <span>Be Confident.</span></h1>
+    <h1>সৌন্দর্যের নতুন ছোঁয়া <span>IRA-তে</span></h1>
 
- <p>
- Give yourself the care you deserve.
- Explore beauty services for hair, skin,
- makeup and more in a warm, welcoming space.
- </p>
+    <p>
+      নিজের সৌন্দর্যকে আরও সুন্দরভাবে ফুটিয়ে তুলুন।
+      আপনার সৌন্দর্য ও যত্নের জন্য IRA Beauty Parlour।
+    </p>
 
- <div class="hero-actions">
-  <a class="btn btn-primary" href="#services">Explore Services →</a>
-  <a class="btn btn-outline"
-  href="https://wa.me/917001539897">WhatsApp Us</a>
- </div>
+    <a href="#services" class="main-btn">
+      আমাদের সার্ভিস দেখুন →
+    </a>
+  </div>
 
- <div class="trust">
-  <span>✦ Beauty & care</span>
-  <span>✦ Personal attention</span>
-  <span>✦ Appointment booking</span>
- </div>
-</div>
+  <div class="hero-image">
+    <img src="parlour-head.png"
+         alt="IRA Beauty Parlour Head">
+  </div>
 
-<div class="hero-photo">
- <div class="photo-frame">
-  <img src="parlour-head.png" alt="Ira Ladies Parlour Head">
- </div>
- <div class="photo-tag">
-  <b>IRA</b>
-  Beauty with care
- </div>
-</div>
-
-</div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-<div class="wrap">
+<section id="services">
 
-<div class="section-head">
- <span class="kicker">Our Services</span>
- <h2>Beauty Services for Every You</h2>
- <p>Choose a service and contact us to ask about availability and pricing.</p>
-</div>
+  <div class="section-title">
+    <h2>আমাদের সার্ভিস</h2>
+    <p>আপনার সৌন্দর্যের যত্নে আমাদের পরিষেবা</p>
+  </div>
 
-<div class="service-grid">
+  <div class="services">
 
-<article class="service">
- <div class="service-icon">✂</div>
- <h3>Haircut & Styling</h3>
- <p>Haircut, trimming, blow-dry and styling for your look.</p>
-</article>
+    <div class="service">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="16" r="10"/>
+        <path d="M7 43c1-12 8-18 17-18s16 6 17 18"/>
+        <path d="M18 17h.1M30 17h.1"/>
+      </svg>
+      <h3>ফেসিয়াল</h3>
+      <p>ত্বকের যত্ন ও সৌন্দর্যচর্চা।</p>
+    </div>
 
-<article class="service">
- <div class="service-icon">✧</div>
- <h3>Makeup</h3>
- <p>Party makeup and occasion-ready beauty looks.</p>
-</article>
+    <div class="service">
+      <svg viewBox="0 0 48 48">
+        <path d="M14 43c-4-12-5-24 1-33 4-6 14-7 19 0 5 8 2 20 0 33"/>
+        <path d="M17 12c-4 12 4 19 2 29M30 10c-5 12 2 22 1 31"/>
+      </svg>
+      <h3>হেয়ার কেয়ার</h3>
+      <p>চুলের যত্ন ও স্টাইলিং।</p>
+    </div>
 
-<article class="service">
- <div class="service-icon">◉</div>
- <h3>Eyebrow Threading</h3>
- <p>Eyebrow shaping and facial threading.</p>
-</article>
+    <div class="service">
+      <svg viewBox="0 0 48 48">
+        <path d="M24 5c-4 8-13 13-13 24a13 13 0 0 0 26 0C37 18 28 13 24 5z"/>
+        <path d="M17 30c1 5 4 7 8 7"/>
+      </svg>
+      <h3>স্কিন কেয়ার</h3>
+      <p>ত্বকের পরিচর্যা ও যত্ন।</p>
+    </div>
 
-<article class="service">
- <div class="service-icon">〰</div>
- <h3>Waxing</h3>
- <p>Waxing services for smooth, well-groomed skin.</p>
-</article>
+    <div class="service">
+      <svg viewBox="0 0 48 48">
+        <path d="M24 5l4 10 11 1-8 8 2 12-9-6-9 6 2-12-8-8 11-1z"/>
+        <path d="M24 30v13"/>
+      </svg>
+      <h3>ব্রাইডাল মেকআপ</h3>
+      <p>বিশেষ দিনের জন্য বিশেষ সাজ।</p>
+    </div>
 
-<article class="service">
- <div class="service-icon">✿</div>
- <h3>Facial & Skin Care</h3>
- <p>Facial and basic skin-care services for a fresh feel.</p>
-</article>
-
-<article class="service">
- <div class="service-icon">✦</div>
- <h3>Bridal Makeup</h3>
- <p>Makeup for weddings and special celebrations.</p>
-</article>
-
-<article class="service">
- <div class="service-icon">♧</div>
- <h3>Hair Spa</h3>
- <p>Hair nourishment and care treatments.</p>
-</article>
-
-<article class="service">
- <div class="service-icon">◇</div>
- <h3>Manicure & Pedicure</h3>
- <p>Nail grooming and hand-and-foot care.</p>
-</article>
-
-<article class="service">
- <div class="service-icon">✧</div>
- <h3>More Beauty Care</h3>
- <p>Ask us about other available parlour services.</p>
-</article>
-
-</div>
-</div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-<div class="wrap about-grid">
-
-<div class="about-art">
- <div class="big-icon">
-  <svg viewBox="0 0 24 24" style="width:90px;height:90px">
-   <path d="M12 3c-2 4-6 6-6 11a6 6 0 0 0 12 0c0-5-4-7-6-11Z"/>
-  </svg>
- </div>
-</div>
-
-<div class="about-copy">
- <span class="kicker">A little about us</span>
- <h2>Care that makes you shine.</h2>
- <p>
- At Ira Ladies Parlour, we believe beauty is personal.
- Our aim is to make every visit comfortable and
- help you feel confident in your own style.
- </p>
-
- <div class="ticks">
-  <span>Friendly service</span>
-  <span>Beauty & grooming</span>
-  <span>Personal attention</span>
-  <span>Appointment enquiries</span>
- </div>
-
- <a class="btn btn-primary" href="#contact">Contact the Parlour</a>
-</div>
-
-</div>
+<section id="about">
+  <div class="about">
+    <h2>IRA Beauty Parlour</h2>
+    <p>
+      সৌন্দর্য, যত্ন ও আত্মবিশ্বাসের একটি সুন্দর ঠিকানা।
+      আমাদের লক্ষ্য আপনাকে সুন্দর অভিজ্ঞতা দেওয়া।
+    </p>
+  </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
-<div class="wrap">
-
-<div class="section-head">
- <span class="kicker">Beauty Inspiration</span>
- <h2>Our Beauty Gallery</h2>
- <p>Some beauty and styling inspirations. Actual services and results may vary.</p>
-</div>
-
-<div class="gallery-grid">
- <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=85" alt="Hair styling">
- <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=700&q=85" alt="Makeup">
- <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=700&q=85" alt="Beauty products">
- <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=700&q=85" alt="Beauty portrait">
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="booking" id="contact">
-<div class="wrap booking-grid">
-
-<div>
- <span class="kicker" style="color:#ffd15a">Get in touch</span>
- <h2>Ready for your beauty moment?</h2>
- <p>
- Call or WhatsApp Ira Ladies Parlour to ask about
- services, prices and appointment availability.
- </p>
- <p>
- <strong>Phone:</strong>
- <a href="tel:7001539897">7001539897</a>
- </p>
-</div>
-
-<form class="contact-card" id="bookingForm">
- <h3>Book an Appointment</h3>
-
- <label for="name">Your name</label>
- <input id="name" required placeholder="Enter your name">
-
- <label for="service">Choose a service</label>
- <select id="service" required>
-  <option value="">Select service</option>
-  <option>Haircut & Styling</option>
-  <option>Makeup</option>
-  <option>Eyebrow Threading</option>
-  <option>Waxing</option>
-  <option>Facial & Skin Care</option>
-  <option>Bridal Makeup</option>
-  <option>Hair Spa</option>
-  <option>Manicure & Pedicure</option>
-  <option>Other</option>
- </select>
-
- <label for="date">Preferred date</label>
- <input id="date" type="date">
-
- <label for="message">Message (optional)</label>
- <textarea id="message" rows="3" placeholder="Any details?"></textarea>
-
- <button class="btn btn-primary" type="submit">
- Send Booking Request via WhatsApp
- </button>
-</form>
-
-</div>
+<section id="contact" class="contact">
+  <h2>যোগাযোগ করুন</h2>
+  <p>IRA Beauty Parlour-এ যোগাযোগের জন্য সরাসরি আমাদের সঙ্গে কথা বলুন।</p>
 </section>
 
 </main>
 
 <footer>
-<div class="wrap foot">
- <div>
-  <strong style="font:700 21px 'Playfair Display'">
-   Ira Ladies Parlour
-  </strong>
-  <br>
-  <small>Beauty • Care • Confidence</small>
- </div>
- <small>© <span id="year"></span> Ira Ladies Parlour. All rights reserved.</small>
- <a href="tel:7001539897">7001539897</a>
-</div>
+  © 2026 IRA Beauty Parlour | All Rights Reserved
 </footer>
-
-<a class="float-wa"
- href="https://wa.me/917001539897"
- aria-label="Chat on WhatsApp">
- <svg viewBox="0 0 24 24" style="stroke:white">
-  <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/>
-  <path d="M9 8.5c.5 2 2 3.5 4.5 4.5"/>
- </svg>
-</a>
-
-<script>
-document.getElementById("year").textContent =
- new Date().getFullYear();
-
-document.getElementById("bookingForm")
-.addEventListener("submit",function(e){
-
- e.preventDefault();
-
- const name=document.getElementById("name").value.trim();
- const service=document.getElementById("service").value;
- const date=document.getElementById("date").value;
- const message=document.getElementById("message").value.trim();
-
- const text =
- `Hello Ira Ladies Parlour!
- Name: ${name}
- Service: ${service}
- Preferred date: ${date || "Not specified"}
- Message: ${message || "No additional message"}`;
-
- window.open(
-  "https://wa.me/917001539897?text="+
-  encodeURIComponent(text),
-  "_blank"
- );
-});
-</script>
 
 </body>
 </html>
